@@ -88,6 +88,8 @@ public class App {
                 qrCode.setVisible(true);
             }
         });
+
+
     }
 
     private void addButtonsToRightPanel() {
@@ -103,7 +105,17 @@ public class App {
         rightPanel.add(blackAndWhiteImageButton);
         rightPanel.add(showCalendarButton);
         rightPanel.add(currencyConverterButton);
+
+        passwordGeneratorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PasswordGenerator password = new PasswordGenerator();
+                password.setVisible(true);
+            }
+        });
     }
+
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
