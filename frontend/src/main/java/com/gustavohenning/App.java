@@ -74,6 +74,22 @@ public class App {
                 wifi.setVisible(true);
             }
         });
+
+        convertTextToAudioButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                TextToAudio audio = new TextToAudio();
+                audio.setVisible(true);
+            }
+        });
+
+        QRCodeGeneratorButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                QRCodeGenerator qrCode = new QRCodeGenerator();
+                qrCode.setVisible(true);
+            }
+        });
+
+
     }
 
     private void addButtonsToRightPanel() {
@@ -89,7 +105,17 @@ public class App {
         rightPanel.add(blackAndWhiteImageButton);
         rightPanel.add(showCalendarButton);
         rightPanel.add(currencyConverterButton);
+
+        passwordGeneratorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PasswordGenerator password = new PasswordGenerator();
+                password.setVisible(true);
+            }
+        });
     }
+
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
