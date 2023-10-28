@@ -44,8 +44,8 @@ public class ShowSavedWifiPassword extends JFrame {
 
         try {
             // Define the path to your Python executable and the script to run
-            String pythonExec = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\venv\\Scripts\\python.exe";
-            String pythonScript = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\show_saved_wifi_passwords.py";
+            String pythonExec = "..\\backend\\venv\\Scripts\\python.exe";
+            String pythonScript = "..\\backend\\show_saved_wifi_passwords.py";
 
             // Run the Python script
             ProcessBuilder processBuilder = new ProcessBuilder(pythonExec, pythonScript);
