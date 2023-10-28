@@ -24,6 +24,8 @@ public class PasswordGenerator extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 400);
         setLocationRelativeTo(null);
+        ImageIcon icon = new ImageIcon("src//main//assets//logo.png");
+        setIconImage(icon.getImage());
         setResizable(true);
 
         // Create labels, combo boxes, and a button for user input

@@ -89,7 +89,6 @@ public class App {
             }
         });
 
-
     }
 
     private void addButtonsToRightPanel() {
