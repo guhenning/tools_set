@@ -24,6 +24,7 @@ public class ShowSavedWifiPassword extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(600, 400);
         setLocationRelativeTo(null);
+        setResizable(false);
 
         wifiInfoPanel = new JPanel(new GridBagLayout());
         scrollPane = new JScrollPane(wifiInfoPanel); // Wrap the panel in a scroll pane

@@ -74,6 +74,20 @@ public class App {
                 wifi.setVisible(true);
             }
         });
+
+        convertTextToAudioButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                TextToAudio audio = new TextToAudio();
+                audio.setVisible(true);
+            }
+        });
+
+        QRCodeGeneratorButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                QRCodeGenerator qrCode = new QRCodeGenerator();
+                qrCode.setVisible(true);
+            }
+        });
     }
 
     private void addButtonsToRightPanel() {
