@@ -56,10 +56,10 @@ import java.io.IOException;
     private void generateQRCode() {
         String info = qrCodeField.getText();
         // Define the path to the venv's Python executable
-        String venvPython = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\venv\\Scripts\\python.exe"; // Replace with the actual path
+        String venvPython = "..\\backend\\venv\\Scripts\\python.exe";
 
         // Path to your Python script
-        String pythonScript = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\qr_code_generator.py";
+        String pythonScript = "..\\backend\\qr_code_generator.py";
 
         // Specify the script and its arguments
         String[] command = new String[]{venvPython, pythonScript, info};

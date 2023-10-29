@@ -3,7 +3,12 @@ import json
 import os
 import sys
 
-# Parse input arguments
+# Check if the correct number of command-line arguments is provided
+if len(sys.argv) != 3:
+    print("Usage: python script.py <text> <language>")
+    sys.exit(1)
+
+# Parse command-line arguments
 input_text = sys.argv[1]
 selected_language = sys.argv[2]
 
@@ -30,7 +35,7 @@ if language_code == "":
 
 # Create the audio file
 try:
-    text_to_convert = gTTS(text=input_text, lang=language_code, tld=domain, slow=False)
+    text_to_convert = gTTS(text=input_text, lang=language_code, tld=domain)
 
     # Determine the download folder based on the operating system
     download_folder = os.path.expanduser("~")  # Default home directory
@@ -48,11 +53,19 @@ try:
 
     audio_output = "speech.mp3"
 
-    # Save Audio in the Download folder
-    download_path = os.path.join(download_folder, audio_output)
-    text_to_convert.save(download_path)
+    # Generate a unique filename by checking for existing files
+    base_filename = "speech.mp3"
+    counter = 0
+    while True:
+        filename = base_filename if counter == 0 else f"speech_{counter}.mp3"
+        full_path = os.path.join(download_folder, filename)
+        if not os.path.exists(full_path):
+            break
+        counter += 1
 
-    print(f"Speech downloaded to: {download_path}")
+    text_to_convert.save(full_path)
+
+    print(f"Speech downloaded to: {full_path}")
 except Exception as e:
     print(f"Error while generating speech: {e}")
     sys.exit(1)

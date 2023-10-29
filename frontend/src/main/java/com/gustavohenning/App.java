@@ -89,7 +89,6 @@ public class App {
             }
         });
 
-
     }
 
     private void addButtonsToRightPanel() {
@@ -111,6 +110,14 @@ public class App {
             public void actionPerformed(ActionEvent e) {
                 PasswordGenerator password = new PasswordGenerator();
                 password.setVisible(true);
+            }
+        });
+
+        currencyConverterButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CurrencyConverter converter = new CurrencyConverter();
+                converter.setVisible(true);
             }
         });
     }

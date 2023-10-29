@@ -24,6 +24,8 @@ public class PasswordGenerator extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 400);
         setLocationRelativeTo(null);
+        ImageIcon icon = new ImageIcon("src//main//assets//logo.png");
+        setIconImage(icon.getImage());
         setResizable(true);
 
         // Create labels, combo boxes, and a button for user input
@@ -110,8 +112,8 @@ public class PasswordGenerator extends JFrame {
     private ArrayList<String> getPasswords() {
         ArrayList<String> passwords = new ArrayList<>();
         try {
-            String pythonExec = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\venv\\Scripts\\python.exe";
-            String pythonScript = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\password_generator.py";
+            String pythonExec = "..\\backend\\venv\\Scripts\\python.exe";
+            String pythonScript = "..\\backend\\password_generator.py";
 
             int numPasswords = (Integer) numPasswordsComboBox.getSelectedItem();
             int passwordLength = (Integer) passwordLengthComboBox.getSelectedItem();

@@ -48,10 +48,10 @@ public class YouTubeVideoDownloader extends JFrame {
 
         try {
             // Define the path to the venv's Python executable
-            String venvPython = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\venv\\Scripts\\python.exe"; // Replace with the actual path
+            String venvPython = "..\\backend\\venv\\Scripts\\python.exe"; // Replace with the actual path
 
             // Path to your Python script
-            String pythonScript = "C:\\Users\\gusta\\Documents\\IntelliJ Projects\\codingtime\\backend\\youtube_downloader.py";
+            String pythonScript = "..\\backend\\youtube_downloader.py";
 
             // Specify the script and its arguments
             String[] command = new String[]{venvPython, pythonScript, ytUrl};
