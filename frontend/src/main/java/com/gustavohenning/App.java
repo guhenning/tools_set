@@ -112,6 +112,14 @@ public class App {
                 password.setVisible(true);
             }
         });
+
+        currencyConverterButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CurrencyConverter converter = new CurrencyConverter();
+                converter.setVisible(true);
+            }
+        });
     }
 
 

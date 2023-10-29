@@ -32,6 +32,16 @@ else:
 # Create the download folder if it doesn't exist
 os.makedirs(download_folder, exist_ok=True)
 
-image.save(os.path.join(download_folder, "qr_code.png"))
+# Generate a unique filename by checking for existing files
+base_filename = "qr_code.png"
+counter = 0
+while True:
+    filename = base_filename if counter == 0 else f"qr_code_{counter}.png"
+    full_path = os.path.join(download_folder, filename)
+    if not os.path.exists(full_path):
+        break
+    counter += 1
 
-print(f"QR Code has been downloaded to {download_folder}")
+image.save(full_path)
+
+print(f"QR Code has been downloaded to {full_path}")
